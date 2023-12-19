@@ -63,6 +63,7 @@ class _Navbar extends React.Component {
   };
 
   render() {
+    const { scrollToMyTarget} = this.props;
     return (
       <>
         <header className="header-global">
@@ -108,18 +109,30 @@ class _Navbar extends React.Component {
                     </Col>
                   </Row>
                 </div>
-                <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
+                <Nav className="navbar-nav-hover align-items-lg-center" navbar >
+                  <UncontrolledDropdown nav >
+                    <DropdownToggle nav  onClick={scrollToMyTarget[0]}>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">자료실</span>
+                      <span className="nav-link-inner--text">회사 소개</span>
                     </DropdownToggle>
                     
                   </UncontrolledDropdown>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
+                  
+                  <UncontrolledDropdown nav >
+                  
+                      <DropdownToggle nav  onClick={scrollToMyTarget[1]}> 
                       <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">문의</span>
+                      <span className="nav-link-inner--text">대표자 소개</span>
+                    </DropdownToggle>
+                    
+
+                  </UncontrolledDropdown>
+                
+
+                  <UncontrolledDropdown nav>
+                    <DropdownToggle nav onClick={scrollToMyTarget[2]}>
+                      <i className="ni ni-collection d-lg-none mr-1" />
+                      <span className="nav-link-inner--text">프로그램 소개</span>
                     </DropdownToggle>
                    
                   </UncontrolledDropdown>
